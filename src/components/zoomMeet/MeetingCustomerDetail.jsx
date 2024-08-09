@@ -181,7 +181,7 @@ const MeetingCustomerDetail = ({ id }) => {
               >
                 Why you want to do digital Marketing for your business
               </td>
-              <td>{data.businessYear} </td>
+              <td>{data.dgForYourBusiness} </td>
               <td></td>
             </tr>
           </tbody>

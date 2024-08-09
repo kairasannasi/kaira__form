@@ -94,9 +94,23 @@ const ClientDetail = ({ id }) => {
                   fontSize: "16px",
                 }}
               >
-                Customer Address
+                Customer Address reelClip
               </td>
               <td>{data.customerAddress}</td>
+              <td></td>
+            </tr>
+            <tr style={{ marginTop: "50px" }}>
+              <td></td>
+              <td
+                style={{
+                  fontWeight: "bold",
+                  color: "#3f51b5",
+                  fontSize: "16px",
+                }}
+              >
+                Reels / Clip / Photoa
+              </td>
+              <td style={{width:'40%'}} >{data.reelClip}</td>
               <td></td>
             </tr>
             <tr style={{ marginTop: "50px" }}>

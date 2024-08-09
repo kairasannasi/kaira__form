@@ -18,7 +18,7 @@ const CreateForm = () => {
   const [sufficientPlan, setSufficientPlan] = useState("");
   const [reelsStraegy, setReelsStraegy] = useState("");
   const [remarks, setRemarks] = useState("");
-
+  const [reelClip,setReelClip] = useState("");
   const postDetail = () =>
     axios
       .post("https://videoaudit-server.onrender.com/api/customer/add", {
@@ -34,6 +34,7 @@ const CreateForm = () => {
         sufficientPlan: sufficientPlan,
         reelsStraegy: reelsStraegy,
         remarks: remarks,
+        reelClip:reelClip
       })
       .then((response) => console.log(response))
       .catch((err) => console.log(err));
@@ -80,7 +81,7 @@ const CreateForm = () => {
                 </Col>
               </Row>
               <Row>
-                <Col md={12} className="mb-3">
+                <Col md={6} className="mb-3">
                   <Form.Group id="customerAddress">
                     <Form.Label>Address</Form.Label>
                     <Form.Control
@@ -89,6 +90,18 @@ const CreateForm = () => {
                       rows="3"
                       value={customerAddress}
                       onChange={(e) => setCustomerAddress(e.target.value)}
+                    />
+                  </Form.Group>
+                </Col>
+                <Col md={6} className="mb-3">
+                  <Form.Group id="customerName">
+                    <Form.Label>Reels / Clips / Photos</Form.Label>
+                    <Form.Control
+                      required
+                      as="textarea"
+                      rows="3"
+                      value={reelClip}
+                      onChange={(e) => setReelClip(e.target.value)}
                     />
                   </Form.Group>
                 </Col>
